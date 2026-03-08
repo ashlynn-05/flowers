@@ -1,26 +1,59 @@
-@import "tailwindcss";
+@font-face {
+  font-family: 'TAN Nimbus';
+  src: url('/fonts/TAN-NIMBUS.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TAN Tangkiwood';
+  src: url('/fonts/TAN-TANGKIWOOD.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TAN Aegean';
+  src: url('/fonts/TAN-AEGEAN.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Beautifully Delicious Script';
+  src: url('/fonts/beautifully-delicious-script-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --butter: #FFED9E;
+  --forest: #124224;
+  --leaves: #4A9166;
+  --blossom: #F2C0CA;
+  --cloud: #F7F2E8;
+  --twilight: #426BC2;
+  --sky: #A6CFF2;
+  --apple: #A6BA1A;
+  --mango: #FF7029;
+  --sunflower: #FFD576;
+  --spring: #CAE8C8;
+  --ocean: #035063;
+  --raspberry: #C21047;
+  --cornflower: #61A6F7;
+  --pale-rose: #FFE2FF;
+  --cream-peach: #FFD6C9;
+  --pale-lilac: #E8E2FF;
+  --bg: var(--cloud);
+  --dark: var(--forest);
+  --accent: var(--mango);
+  --accent2: var(--leaves);
+  --hero-bg: var(--butter);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
+body { margin: 0; padding: 0; background: var(--bg); color: var(--dark); }
+@media (max-width: 768px) {
+  * { -webkit-tap-highlight-color: transparent; }
 }
